@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f0e5">
+  <meta name="description" content="The wedding celebration of George and Jose Antonio at Clearwell Castle on Tuesday 17 August 2027. Invitation, travel, accommodation and RSVP information.">
+  <link rel="alternate" hreflang="es" href="./es.html">
+  <title>George &amp; Jose Antonio | Our Wedding — 17 August 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #f5f0e5;
+      --ivory-deep: #ebe2d1;
+      --paper: #faf7ef;
+      --wine: #732936;
+      --wine-deep: #55202b;
+      --gold: #ab8950;
+      --gold-muted: #c9b48a;
+      --ink: #292621;
+      --ink-soft: #61574c;
+      --rule: rgba(155, 124, 70, .3);
+      --body: 'DM Sans', Arial, sans-serif;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --script: 'Great Vibes', cursive;
+      --shadow: 0 18px 55px rgba(51, 38, 24, .11);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { margin: 0; color: var(--ink); background: var(--ivory); font-family: var(--body); line-height: 1.7; }
+    body.is-locked { overflow: hidden; }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button { cursor: pointer; }
+    :focus-visible { outline: 3px solid #a95960; outline-offset: 4px; }
+    [hidden] { display: none !important; }
+    ::selection { background: #d5b5b5; color: #30191d; }
+
+    /* The first impression: a dark, softly grained antique writing desk. */
+    .landing {
+      position: fixed; inset: 0; z-index: 100; overflow: hidden;
+      display: grid; place-items: center; padding: clamp(18px, 4vw, 48px);
+      background-color: #28180f;
+      background-image:
+        radial-gradient(ellipse at 50% 35%, rgba(116, 73, 42, .42), transparent 65%),
+        radial-gradient(ellipse at 90% 70%, rgba(0, 0, 0, .45), transparent 55%),
+        repeating-linear-gradient(0deg, transparent 0px, rgba(0,0,0,.08) 2px, transparent 4px, rgba(236,188,122,.035) 7px, transparent 10px, transparent 22px),
+        repeating-linear-gradient(90deg, transparent 0 21.5%, rgba(12,7,4,.30) 21.65%, rgba(199,141,84,.07) 21.8%, transparent 22.1%, transparent 43.6%),
+        linear-gradient(110deg, #1b110c 0%, #553622 28%, #352115 54%, #553521 78%, #1d140d 100%);
+      color: #f8ede0;
+      transition: opacity .65s ease, visibility .65s;
+    }
+    .landing::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.19;
+      background-image:repeating-linear-gradient(0deg, transparent 0 4px, rgba(255,223,181,.035) 5px, transparent 6px, transparent 19px);
+      mix-blend-mode: screen; }
+    .landing::after { content:""; position:absolute; inset:0; pointer-events:none; box-shadow: inset 0 0 180px rgba(0,0,0,.72); }
+    .landing-inner { width: min(1120px, 100%); position: relative; z-index: 1; text-align:center; margin: auto; }
+    .landing-monogram { color:#d5b581; letter-spacing:.26em; font: 500 clamp(14px, 1.7vw, 19px) var(--serif); margin:0 0 10px; }
+    /* Give both invitation languages equal visual weight, distinguished only by italic Spanish. */
+    .landing-heading { margin:0; }
+    .landing-title, .landing-title-es {
+      display:block; color:#f9f2e7;
+      font:400 clamp(41px, 6.3vw, 77px)/1.1 var(--serif);
+      text-shadow:0 3px 30px rgba(0,0,0,.35);
+    }
+    .landing-title-es { font-style:italic; margin-top:6px; }
+    .landing-subtitle { color:#dac7af; font-size:12px; letter-spacing:.17em; text-transform:uppercase; margin:16px 0 22px; line-height:1.75; }
+    .landing-subtitle span { display:block; }
+    .landing-note span { display:block; }
+    .landing-divider { width:114px; height:1px; background:#b99662; margin:0 auto 10px; position:relative; }
+    .landing-divider::after { content:'✦'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background:#402819; padding:0 12px; color:#c2a070; font-size:12px; }
+    .envelopes { display:flex; justify-content:center; align-items:center; gap:clamp(10px, 4vw, 76px); margin:0 auto; }
+    .envelope-choice {
+      position:relative; display:flex; flex-direction:column; align-items:center; border:0; background:none; padding:0;
+      color:#f3e7d8; width:min(44%, 430px); min-width:0; transition: transform .78s cubic-bezier(.2,.8,.18,1), opacity .45s ease, filter .3s ease;
+      will-change: transform;
+    }
+    .envelope-choice:hover { filter:brightness(1.06); }
+    .envelope-choice:focus-visible { outline-offset: -8px; }
+    .envelope-choice.is-unavailable { opacity:.84; }
+    .envelope-visual { position:relative; display:block; width:100%; aspect-ratio:1.5; perspective:850px; filter:drop-shadow(5px 17px 17px rgba(0,0,0,.52)); }
+    .envelope-photo { position:absolute; display:block; width:126%; max-width:none; left:50%; top:50%; transform:translate(-50%,-50%); transition:opacity .2s ease; pointer-events:none; }
+    .envelope-label { position:absolute; z-index:4; top:82%; left:50%; transform:translate(-50%,-50%); color:#6c2830; white-space:nowrap;
+      font:400 clamp(25px, 3.7vw, 43px)/1 var(--script); text-shadow:0 1px 1px rgba(255,255,255,.8); transition:opacity .2s ease; pointer-events:none; }
+    .envelope-hint { color:#e4d1b7; text-transform:uppercase; letter-spacing:.19em; font:500 10px var(--body); margin-top:16px; }
+    .choice-note { display:block; color:#c4a990; font-size:11px; margin-top:7px; min-height:16px; }
+    .landing-note { color:#d4c0a8; font-size:13px; margin: 8px 0 0; }
+    .language-toast { position:fixed; bottom:28px; left:50%; transform:translateX(-50%); background:#f7f0e3; color:#46292b; padding:13px 22px; border:1px solid #ac8b60; z-index:110;
+      border-radius:4px; box-shadow:0 12px 30px rgba(0,0,0,.4); font-size:14px; text-align:center; max-width:90vw; }
+    .landing-title, .landing-title-es, .landing-subtitle, .landing-monogram, .landing-divider, .landing-note { transition:opacity .45s ease; }
+    .landing.is-opening .landing-title,
+    .landing.is-opening .landing-title-es,
+    .landing.is-opening .landing-subtitle,
+    .landing.is-opening .landing-monogram,
+    .landing.is-opening .landing-divider,
+    .landing.is-opening .landing-note { opacity:0; }
+    .landing.is-opening .envelope-choice:not(.is-selected) { opacity:0; pointer-events:none; }
+    .landing.is-opening .envelope-choice.is-selected { z-index:5; transform:translate(var(--fly-x, 0px), var(--fly-y, 0px)) scale(1.22); }
+    .landing.is-opening .envelope-choice.is-selected .envelope-hint,
+    .landing.is-opening .envelope-choice.is-selected .choice-note { opacity:0; }
+    .envelope-model { position:absolute; left:10%; top:13%; width:80%; height:74%; opacity:0; transition:opacity .25s; transform-style:preserve-3d; }
+    .model-back { position:absolute; inset:0; background:#e9ddc5; border:1px solid #c8b69d; box-shadow:inset 0 0 28px rgba(152,119,71,.22); }
+    .model-front { position:absolute; inset:0; z-index:3; background:#f6eddb; clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%); box-shadow:inset 0 -15px 24px rgba(98,72,41,.12); }
+    .model-flap { position:absolute; z-index:4; top:0; left:0; width:100%; height:62%; transform-origin:top center; clip-path:polygon(0 0,100% 0,50% 97%); background:linear-gradient(180deg,#f7efdf 0%,#e6d8bd 100%); transition:transform .65s cubic-bezier(.2,.6,.2,1); backface-visibility:visible; }
+    .opening-letter { position:absolute; z-index:2; left:13%; width:74%; top:13%; height:84%; display:flex; justify-content:center; align-items:flex-start; padding-top:15%;
+      background:#fffaf0; color:#6c2934; border:1px solid #c5ac80; box-shadow:0 8px 16px rgba(0,0,0,.12); transform:translateY(12%) scale(.86); opacity:0; transition:transform .68s ease, opacity .5s ease; }
+    .opening-letter span { font: 500 19px/1.1 var(--serif); white-space:nowrap; }
+    .landing.seal-broken .is-selected .envelope-photo,
+    .landing.seal-broken .is-selected .envelope-label { opacity:0; }
+    .landing.seal-broken .is-selected .envelope-model { opacity:1; }
+    .landing.flap-open .is-selected .model-flap { transform:rotateX(168deg); }
+    .landing.letter-emerged .is-selected .opening-letter { transform:translateY(-46%) scale(.95); opacity:1; }
+    body.is-revealing .landing { opacity:0; visibility:hidden; pointer-events:none; }
+
+    /* The invitation: restrained ivory, burgundy and aged gold. */
+    .site { opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; min-height:100vh; overflow:clip; padding-top:76px; }
+    body.is-revealing .site, body.has-entered .site { opacity:1; transform:none; }
+    .site::before { content:""; z-index:-1; position:absolute; inset:0; opacity:.45; pointer-events:none;
+      background-image:repeating-linear-gradient(0deg, transparent 0 7px, rgba(104,81,47,.014) 8px, transparent 9px, transparent 21px); }
+    .site-header { position:fixed; z-index:50; top:0; left:0; right:0; height:76px; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(20px,4vw,70px);
+      background:rgba(248,245,235,.94); backdrop-filter:blur(14px); border-bottom:1px solid rgba(159,129,75,.24); box-shadow:0 3px 20px rgba(58,41,31,.045); }
+    .brand { display:flex; align-items:center; gap:13px; color:var(--wine-deep); text-decoration:none; }
+    .brand-mark { border:1px solid var(--gold); width:42px; height:42px; display:grid; place-items:center; font:500 15px var(--serif); letter-spacing:-.03em; }
+    .brand-text { font:500 19px var(--serif); letter-spacing:.03em; }
+    .header-right { display:flex; align-items:center; gap:12px; }
+    .header-date { font:600 11px var(--body); letter-spacing:.13em; color:#6e6156; text-transform:uppercase; margin-right:13px; }
+    .header-rsvp { font-size:11px; text-decoration:none; text-transform:uppercase; letter-spacing:.13em; color:var(--wine); padding:11px 17px; border:1px solid var(--gold); transition:background .2s; }
+    .header-rsvp:hover { background:#eee3d0; }
+    .menu-toggle { display:flex; align-items:center; justify-content:center; gap:10px; padding:10px 0 10px 12px; background:none; border:0; color:var(--wine); font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+    .burger { display:inline-flex; width:21px; height:16px; flex-direction:column; justify-content:space-between; }
+    .burger i { height:1.5px; background:currentColor; width:100%; transition:transform .2s; }
+    .menu-toggle[aria-expanded="true"] .burger i:first-child { transform:translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] .burger i:last-child { transform:translateY(-7px) rotate(-45deg); }
+    .menu-toggle[aria-expanded="true"] .burger i:nth-child(2) { opacity:0; }
+    .menu-shade { position:fixed; z-index:48; inset:76px 0 0; background:rgba(34,24,20,.38); opacity:0; visibility:hidden; transition:opacity .25s,visibility .25s; }
+    .menu-panel { position:fixed; z-index:49; top:76px; right:0; bottom:0; width:min(370px, 90vw); background:#f9f4e9; box-shadow:-10px 0 30px rgba(0,0,0,.09); overflow:auto;
+      padding:35px 32px; transform:translateX(110%); visibility:hidden; transition:transform .3s, visibility .3s; }
+    body.menu-open .menu-shade { opacity:1; visibility:visible; }
+    body.menu-open .menu-panel { transform:translateX(0); visibility:visible; }
+    .menu-panel > p { margin:0 0 20px; letter-spacing:.19em; color:var(--gold); font:700 11px var(--body); text-transform:uppercase; }
+    .menu-links { display:flex; flex-direction:column; }
+    .menu-links a { text-decoration:none; padding:11px 0; border-bottom:1px solid var(--rule); font:500 24px var(--serif); color:var(--ink); transition:color .2s, padding-left .2s; }
+    .menu-links a:hover, .menu-links a[aria-current="location"] { color:var(--wine); padding-left:6px; }
+    .menu-foot { color:var(--ink-soft); font-size:12px; margin-top:25px; }
+    .section { padding:clamp(75px,10vw,130px) 24px; scroll-margin-top:70px; }
+    .section-wrap { max-width:1100px; margin:0 auto; }
+    .section-light { background:var(--paper); }
+    .section-cream { background:var(--ivory); }
+    .section-tint { background:var(--ivory-deep); }
+    .section-dark { background:#352628; color:#fff7eb; }
+    .kicker { margin:0 0 12px; font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:var(--gold); }
+    .section-title { margin:0 0 20px; font:500 clamp(44px,5.8vw,72px)/1.05 var(--serif); letter-spacing:-.018em; color:var(--wine-deep); }
+    .section-dark .section-title { color:#f7efe1; }
+    .section-lead { margin:0; max-width:710px; font:400 clamp(20px,2.2vw,25px)/1.5 var(--serif); color:#4b4239; }
+    .section-dark .section-lead { color:#dfcfc2; }
+    .ornament { display:flex; align-items:center; justify-content:center; gap:18px; color:var(--gold); margin:25px 0 35px; }
+    .ornament::before, .ornament::after { content:""; height:1px; background:var(--rule); width:80px; }
+    .section-center { text-align:center; }
+    .section-center .section-lead { margin-left:auto; margin-right:auto; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:11px; min-height:48px; padding:14px 25px; background:var(--wine); color:white; text-decoration:none; text-align:center;
+      border:1px solid var(--wine); border-radius:1px; font:700 11px/1.45 var(--body); letter-spacing:.13em; text-transform:uppercase; transition:background .2s,transform .2s,box-shadow .2s; }
+    .btn:hover { background:var(--wine-deep); box-shadow:0 6px 18px rgba(70,30,39,.17); transform:translateY(-2px); }
+    .btn-outline { color:var(--wine); border-color:var(--gold); background:transparent; }
+    .btn-outline:hover { color:var(--wine-deep); background:#eee3ce; }
+    .btn:focus-visible { outline-offset:4px; }
+    .btn[aria-disabled="true"] { cursor:not-allowed; opacity:.65; pointer-events:none; }
+    .button-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:29px; }
+
+    .hero { position:relative; padding:75px 24px 75px; background:linear-gradient(180deg,#f9f5eb 0%,#f3ecde 100%); min-height:min(820px, 95vh); display:flex; align-items:center; overflow:hidden; scroll-margin-top:105px; }
+    .hero::before, .hero::after { content:""; position:absolute; width:115px; height:115px; border-color:rgba(163,130,71,.34); pointer-events:none; }
+    .hero::before { top:38px; left:35px; border-top:1px solid; border-left:1px solid; }
+    .hero::after { bottom:38px; right:35px; border-bottom:1px solid; border-right:1px solid; }
+    .hero-grid { position:relative; z-index:1; width:100%; max-width:1180px; margin:auto; display:grid; grid-template-columns:1.06fr .94fr; align-items:center; gap:clamp(30px,5vw,90px); }
+    .hero-copy { max-width:640px; }
+    .hero-intro { color:#99804e; text-transform:uppercase; letter-spacing:.22em; font-size:11px; font-weight:700; margin:0 0 25px; }
+    .hero-names { margin:0; color:var(--wine-deep); font:500 clamp(64px, 6.9vw, 105px)/.89 var(--serif); letter-spacing:-.04em; }
+    .hero-names em { display:block; color:var(--wine); font-weight:400; font-style:normal; }
+    .hero-amp { font-family:var(--script); font-size:.9em; padding-right:.04em; }
+    .hero-rule { height:1px; max-width:290px; background:var(--rule); margin:30px 0; }
+    .hero-invite { font:400 clamp(23px,2.45vw,29px)/1.4 var(--serif); max-width:560px; margin:0 0 19px; color:#3e342e; }
+    .hero-details { color:#574b41; letter-spacing:.06em; font-size:12px; line-height:2; text-transform:uppercase; }
+    .hero-details strong { color:var(--wine-deep); font-weight:700; }
+    .hero-photo-stack { position:relative; padding:26px 14px 24px 10px; }
+    .castle-frame { position:relative; background:#ede4d3; padding:11px; box-shadow:var(--shadow); transform:rotate(1.4deg); border:1px solid #c3ad83; }
+    .castle-frame img { width:100%; aspect-ratio: 4/3; object-fit:cover; object-position:center; filter:sepia(.1) saturate(.79); }
+    .castle-frame::before { content:""; position:absolute; inset:-17px 23px 23px -17px; border:1px solid rgba(163,130,71,.5); z-index:-1; }
+    .castle-caption { display:block; text-align:center; font:italic 19px var(--serif); color:#6d5340; margin-top:8px; }
+    .hero-polaroid { position:absolute; bottom:-33px; left:-8%; width:34%; max-width:174px; padding:7px 7px 21px; background:#fcf7ed; border:1px solid #d2bb9b; box-shadow:0 8px 20px rgba(0,0,0,.17); transform:rotate(-7deg); }
+    .hero-polaroid img { aspect-ratio:3/4; object-fit:cover; filter:sepia(.15); }
+    .hero-small-label { position:absolute; right:2px; top:5px; padding:0 0 12px; color:#81623f; font:italic 19px var(--serif); }
+
+    .two-col { display:grid; grid-template-columns: 1fr 1fr; gap:clamp(30px,5vw,80px); align-items:center; }
+    .body-copy { color:#4d453b; font-size:15px; max-width:700px; }
+    .body-copy p { margin:0 0 20px; }
+    .body-copy strong { color:var(--wine-deep); }
+    .couple-portrait { background:#eee4d7; padding:12px; border:1px solid var(--gold-muted); box-shadow:var(--shadow); position:relative; max-width:420px; margin:auto; }
+    .couple-portrait::after { content:""; position:absolute; inset:20px; border:1px solid rgba(255,250,240,.35); pointer-events:none; }
+    .couple-portrait img { width:100%; max-height:540px; object-fit:cover; object-position:center top; filter:sepia(.07); }
+    .itinerary { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin-top:55px; }
+    .schedule-item { border-top:1px solid var(--gold-muted); padding:19px 7px 0 0; }
+    .schedule-time { color:var(--wine); font:500 29px var(--serif); line-height:1.1; }
+    .schedule-name { display:block; font-size:12px; line-height:1.5; margin-top:10px; color:#544a3e; }
+
+    .dress-panel { max-width:940px; margin:36px auto 0; padding:clamp(26px,5vw,60px); border:1px solid var(--gold-muted); background:rgba(255,252,245,.65); position:relative; }
+    .dress-panel::before, .dress-panel::after { content:'❧'; position:absolute; font:37px var(--serif); color:var(--gold); }
+    .dress-panel::before { top:8px; left:18px; }
+    .dress-panel::after { bottom:8px; right:18px; transform:rotate(180deg); }
+    .dress-panel p { max-width:720px; margin:0 auto 18px; color:#51483d; font-size:15px; }
+    .dress-panel .dress-quote { font:italic 500 clamp(23px,3vw,31px)/1.38 var(--serif); color:var(--wine-deep); margin-bottom:22px; }
+    .dress-panel .dress-note { font:italic 500 clamp(23px,3vw,31px)/1.38 var(--serif); color:var(--wine-deep); margin:28px 0 0; }
+
+    .package-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:25px; margin:43px 0 32px; }
+    .package { border:1px solid var(--gold-muted); background:#fcf8ef; box-shadow:0 8px 35px rgba(66,45,30,.045); padding:clamp(25px,3.3vw,42px); display:flex; flex-direction:column; }
+    .package-top { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+    .package-dates { font-size:11px; color:#806640; text-transform:uppercase; letter-spacing:.11em; }
+    .package-feature { font-size:10px; color:var(--wine); border:1px solid var(--gold-muted); padding:4px 9px; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
+    .package h3 { font:500 37px/1.03 var(--serif); color:var(--wine-deep); margin:22px 0 12px; }
+    .price { color:#897350; font:500 29px var(--serif); margin-bottom:11px; }
+    .price small { font:400 12px var(--body); color:var(--ink-soft); display:block; margin-top:4px; }
+    .package p { font-size:14px; color:#554b42; margin:0 0 16px; }
+    .package ul { list-style:none; margin:10px 0 0; padding:0; }
+    .package li { padding:10px 0 10px 23px; border-top:1px solid rgba(171,137,80,.18); position:relative; font-size:13px; color:#443d34; }
+    .package li::before { content:'✦'; color:var(--gold); position:absolute; left:0; top:10px; font-size:10px; }
+    .information-panel { border-left:3px solid var(--gold); background:rgba(255,255,255,.43); padding:22px 25px; color:#554639; font-size:14px; margin-top:28px; }
+    .information-panel strong { color:var(--wine-deep); }
+
+    .flight-table-wrap { overflow-x:auto; margin-top:32px; border:1px solid var(--gold-muted); }
+    .flight-table { width:100%; border-collapse:collapse; font-size:13px; min-width:610px; }
+    .flight-table thead { background:#e6d9bf; color:#41342b; font-size:10px; text-transform:uppercase; letter-spacing:.13em; }
+    .flight-table th, .flight-table td { padding:16px 17px; text-align:left; border-bottom:1px solid rgba(171,137,80,.25); }
+    .flight-table tbody tr:last-child td { border-bottom:0; }
+    .flight-table td { color:#4e433b; }
+    .travel-bottom { display:grid; grid-template-columns:1fr 1fr; gap:25px; margin-top:35px; }
+    .taxi-panel { margin-top:35px; padding:clamp(25px,3.3vw,40px); background:#faf6ed; border:1px solid var(--gold-muted); }
+    .taxi-panel h3 { font:500 36px/1.1 var(--serif); color:var(--wine-deep); margin:0 0 8px; }
+    .taxi-panel > p { margin:0 0 20px; font-size:14px; color:var(--ink-soft); }
+    .taxi-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:26px; }
+    .taxi-contact { min-width:0; padding:14px 0; display:flex; flex-direction:column; gap:3px; border-top:1px solid var(--rule); }
+    .taxi-contact span { color:var(--ink); font-size:14px; font-weight:600; }
+    .taxi-contact a { color:var(--wine); font-size:14px; text-decoration:underline; text-underline-offset:4px; overflow-wrap:anywhere; }
+    .taxi-panel .taxi-footnote { font-size:12px; margin:20px 0 0; }
+    .sub-card { border:1px solid var(--rule); padding:28px; background:#faf6ed; }
+    .sub-card h3 { font:500 30px var(--serif); color:var(--wine-deep); margin:0 0 9px; }
+    .sub-card p { font-size:13px; margin:0 0 16px; color:var(--ink-soft); }
+    .sub-card .text-link { color:var(--wine); font-size:12px; font-weight:700; letter-spacing:.04em; text-underline-offset:5px; }
+    .map-frame { width:100%; height:265px; border:1px solid var(--gold-muted); margin:22px 0; background:#dfd8c9; }
+    .map-frame iframe { width:100%; height:100%; border:0; display:block; }
+    .address { font-style:normal; font-size:13px; line-height:1.9; color:#55483d; }
+
+    .tradition-inner { max-width:810px; text-align:center; margin:auto; }
+    .tradition-inner p { color:#ecdfd2; }
+    .viva { font:400 clamp(43px,6.9vw,79px)/1.15 var(--serif); margin:24px 0 12px; color:#e4c694; }
+    .viva-caption { font:italic 22px var(--serif); color:#e9ddd1; }
+    .viva-reply { font:400 clamp(55px,8vw,95px)/1 var(--script); margin:20px 0 28px; color:#fff4e2; }
+
+    .gift-inner { max-width:770px; margin:auto; text-align:center; }
+    .gift-inner p { font-size:15px; color:#4c4035; margin:0 0 20px; }
+    .gift-script { font:400 47px var(--script); color:var(--wine); margin:0 0 24px; }
+    .gift-box { border:1px solid var(--gold-muted); padding:28px; margin-top:37px; }
+    .gift-box h3 { font:500 32px var(--serif); color:var(--wine-deep); margin:0 0 10px; }
+    .gift-box p { font-size:13px; }
+
+    .faq-list { max-width:820px; margin:38px auto 0; border-top:1px solid var(--gold-muted); }
+    .faq-list details { border-bottom:1px solid var(--gold-muted); }
+    .faq-list summary { padding:22px 48px 22px 0; cursor:pointer; list-style:none; position:relative; font:500 25px/1.25 var(--serif); color:var(--wine-deep); }
+    .faq-list summary::-webkit-details-marker { display:none; }
+    .faq-list summary::after { content:'+'; font:400 25px var(--serif); position:absolute; right:4px; top:18px; color:var(--gold); }
+    .faq-list details[open] summary::after { content:'−'; }
+    .faq-list details > p { margin:0 0 24px; font-size:14px; color:#544a3e; }
+
+    .rsvp-card { margin:auto; max-width:790px; border:1px solid var(--gold-muted); background:#fbf7ed; padding:clamp(26px,5.8vw,65px); text-align:center; box-shadow:var(--shadow); position:relative; }
+    .rsvp-card::before { content:""; position:absolute; inset:12px; border:1px solid rgba(171,137,80,.34); pointer-events:none; }
+    .rsvp-card > * { position:relative; }
+    .rsvp-card h2 { font:500 clamp(53px,7vw,83px)/1 var(--serif); margin:0 0 24px; color:var(--wine-deep); }
+    .rsvp-card p { margin:0 auto 20px; max-width:530px; color:#55483d; font-size:14px; }
+    .rsvp-card .deadline { color:var(--gold); font-size:11px; font-weight:700; letter-spacing:.2em; margin:0 0 18px; }
+    .request-note { margin:22px auto 0; padding:12px 16px; max-width:520px; color:#78552e; border:1px dashed #c5ae82; background:#f3ead7; font-size:12px; }
+
+    .contact-grid { display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin:32px 0 0; }
+    .contact-person { border:1px solid var(--gold-muted); padding:26px; min-width:245px; background:#fcf8ef; }
+    .contact-person h3 { margin:0 0 18px; font:500 30px var(--serif); color:var(--wine-deep); }
+    .contact-person .btn { width:100%; }
+    .contact-note { max-width:650px; margin:27px auto 0; color:var(--ink-soft); font-size:12px; }
+    .footer { padding:53px 24px 45px; text-align:center; background:#302729; color:#ebdfd0; }
+    .footer-monogram { font:400 54px var(--script); color:#d5b886; margin:0 0 6px; }
+    .footer p { font-size:12px; letter-spacing:.1em; margin:5px 0; }
+    .footer button { background:transparent; border:0; color:#d8be96; text-decoration:underline; text-underline-offset:4px; margin-top:20px; font-size:11px; cursor:pointer; }
+    .footer button:hover { color:white; }
+
+    @media (max-width:900px) {
+      .hero-grid { grid-template-columns:1fr; gap:36px; }
+      .hero-copy { text-align:center; max-width:780px; margin:auto; }
+      .hero-rule { margin:24px auto; }
+      .hero-photo-stack { max-width:540px; width:84%; margin:0 auto; padding-bottom:36px; }
+      .hero-polaroid { left:-4%; }
+      .hero-invite { margin-left:auto; margin-right:auto; }
+      .two-col { grid-template-columns:1fr; }
+      .section-copy-first { order:-1; }
+      .couple-portrait { width:min(350px,90%); }
+      .itinerary { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:640px) {
+      html { scroll-padding-top:83px; }
+      .landing { padding:20px 12px; }
+      .landing-inner { padding-bottom:25px; }
+      .landing-monogram { margin-bottom:11px; }
+      .landing-title, .landing-title-es { font-size:clamp(33px, 9vw, 50px); line-height:1.05; }
+      .landing-title-es { margin-top:7px; }
+      .landing-subtitle { font-size:10px; letter-spacing:.13em; margin:15px 0 26px; }
+      .envelopes { gap:0; }
+      .envelope-choice { width:50%; }
+      .envelope-label { font-size:clamp(24px,6.6vw,36px); }
+      .envelope-hint { font-size:9px; letter-spacing:.1em; margin-top:14px; }
+      .landing-note { max-width:300px; margin:24px auto 0; font-size:12px; }
+      .site-header { height:65px; padding:0 17px; }
+      .brand-mark { width:35px; height:35px; font-size:13px; }
+      .brand-text { font-size:17px; }
+      .header-date { display:none; }
+      .header-rsvp { font-size:10px; padding:7px 11px; }
+      .menu-toggle { font-size:0; gap:0; padding:10px; }
+      .menu-panel { top:65px; }
+      .menu-shade { top:65px; }
+      .site { padding-top:65px; }
+      .hero { padding:56px 21px 85px; min-height:0; }
+      .hero::before { top:19px; left:14px; width:48px; height:48px; }
+      .hero::after { bottom:19px; right:14px; width:48px; height:48px; }
+      .hero-names { font-size:clamp(63px, 14vw, 90px); }
+      .hero-details { font-size:11px; }
+      .hero-photo-stack { width:89%; padding:45px 10px 20px 26px; }
+      /* On phones the portrait overlaps the top-left sky, not the venue caption. */
+      .hero-polaroid { top:-2px; bottom:auto; left:-9%; width:32%; max-width:140px; transform:rotate(-7deg); }
+      .castle-caption { font-size:clamp(15px,4vw,19px); }
+      .hero-small-label { display:none; }
+      .section { padding:75px 22px; }
+      .section-title { font-size:clamp(47px, 10.7vw, 63px); }
+      .section-lead { font-size:20px; }
+      .itinerary { gap:17px; }
+      .schedule-time { font-size:25px; }
+      .schedule-name { font-size:12px; }
+      .dress-panel { padding:40px 24px; }
+      .package-grid, .travel-bottom { grid-template-columns:1fr; }
+      .package { padding:28px; }
+      .package h3 { font-size:35px; }
+      .contact-grid { flex-direction:column; }
+      .contact-person { min-width:0; }
+      .btn { width:100%; }
+      .button-row { justify-content:center; }
+    }
+    @media (max-width:700px) {
+      .taxi-list { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:18px; }
+      .flight-table-wrap { overflow:visible; border:0; }
+      .flight-table { min-width:0; border:0; }
+      .flight-table thead { display:none; }
+      .flight-table tbody { display:grid; gap:12px; }
+      .flight-table tbody tr { display:block; border:1px solid var(--gold-muted); background:#faf6ed; padding:6px 13px; }
+      .flight-table td { display:flex; justify-content:space-between; gap:12px; text-align:right; align-items:baseline; padding:9px 0; font-size:12px; }
+      .flight-table td:last-child { border-bottom:0; }
+      .flight-table td::before { content:attr(data-label); font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-soft); font-weight:600; text-align:left; flex:0 0 auto; }
+    }
+    @media (max-width:400px) { .taxi-list { grid-template-columns:1fr; } }
+    @media (max-width:420px) { .brand-mark { display:none; } .brand-text { font-size:16px; } .header-right { gap:6px; } }
+    @media (max-width:350px) { .landing-title, .landing-title-es { font-size:29px; } .brand-text { font-size:14px; } .header-rsvp { font-size:9px; padding:7px 7px; } .hero-names { font-size:59px; } }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; transition-duration:.01ms !important; }
+    }
+  </style>
+</head>
+<body class="is-locked">
+  <div class="landing" id="landing" aria-label="Choose your invitation language / Elige el idioma de la invitación">
+    <div class="landing-inner">
+      <p class="landing-monogram">G &amp; JA</p>
+      <h1 class="landing-heading"><span class="landing-title" lang="en">An Invitation Awaits</span><span class="landing-title-es" lang="es">Una invitación os espera</span></h1>
+      <p class="landing-subtitle"><span>The wedding celebration of George &amp; Jose Antonio</span><span lang="es">La celebración de la boda de George y Jose Antonio</span></p>
+      <div class="landing-divider" aria-hidden="true"></div>
+      <div class="envelopes" role="group" aria-label="Invitation language">
+        <button type="button" class="envelope-choice" id="english-envelope" aria-label="Open the English invitation">
+          <span class="envelope-visual" aria-hidden="true">
+            <img class="envelope-photo" src="./images/envelope.PNG" alt="" fetchpriority="high">
+            <span class="envelope-model"><span class="model-back"></span><span class="opening-letter"><span>G &amp; JA</span></span><span class="model-front"></span><span class="model-flap"></span></span>
+            <span class="envelope-label">English</span>
+          </span>
+          <span class="envelope-hint">Open invitation</span>
+          <span class="choice-note">&nbsp;</span>
+        </button>
+        <button type="button" class="envelope-choice" id="spanish-envelope" aria-label="Abrir la invitación en español">
+          <span class="envelope-visual" aria-hidden="true">
+            <img class="envelope-photo" src="./images/envelope.PNG" alt="">
+            <span class="envelope-model"><span class="model-back"></span><span class="opening-letter"><span>G &amp; JA</span></span><span class="model-front"></span><span class="model-flap"></span></span>
+            <span class="envelope-label" lang="es">Español</span>
+          </span>
+          <span class="envelope-hint" lang="es">Abrir invitación</span>
+          <span class="choice-note">&nbsp;</span>
+        </button>
+      </div>
+      <p class="landing-note"><span>Choose your language to view the invitation.</span><span lang="es">Elige tu idioma para ver la invitación.</span></p>
+    </div>
+  </div>
+
+  <div class="site" id="site" hidden>
+    <header class="site-header">
+      <a class="brand" href="#welcome" aria-label="George and Jose Antonio — back to the invitation">
+        <span class="brand-mark">G·JA</span><span class="brand-text">George &amp; Jose Antonio</span>
+      </a>
+      <div class="header-right">
+        <span class="header-date">17 August 2027</span>
+        <a class="header-rsvp" href="https://docs.google.com/forms/d/e/1FAIpQLSds0-R75gMFCttVM6Voz6zXyzEYcZKjLcm8dMzjK9XXsX5DzQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" aria-label="Complete the RSVP on Google Forms (opens in a new tab)">RSVP</a>
+        <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="menu-panel" aria-label="Open navigation menu">
+          Menu <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </header>
+    <div class="menu-shade" id="menu-shade" aria-hidden="true"></div>
+    <nav class="menu-panel" id="menu-panel" aria-label="Wedding website navigation" inert>
+      <p>Explore the invitation</p>
+      <div class="menu-links">
+        <a href="#welcome">The Invitation</a>
+        <a href="#celebration">Our Celebration</a>
+        <a href="#dress-code">Dress Code</a>
+        <a href="#accommodation">Accommodation</a>
+        <a href="#travel">Travel &amp; Transfers</a>
+        <a href="#traditions">Our Traditions</a>
+        <a href="#gifts">Wedding Gifts</a>
+        <a href="#faq">FAQs</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#contact">Contact Us</a>
+        <a href="./es.html" lang="es" class="language-switch">Español · Versión en español</a>
+      </div>
+      <p class="menu-foot">Tuesday 17 August 2027 · Clearwell Castle</p>
+    </nav>
+
+
+    <main>
+      <section class="hero" id="welcome" aria-labelledby="hero-heading">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="hero-intro">Together with our family and friends</p>
+            <h1 class="hero-names" id="hero-heading" tabindex="-1">George <span class="hero-amp">&amp;</span><em>Jose Antonio</em></h1>
+            <div class="hero-rule" aria-hidden="true"></div>
+            <p class="hero-invite">We would love you to join us for our special day, as we celebrate our love and the beginning of a beautiful new chapter together.</p>
+            <p class="hero-details"><strong>Tuesday, 17 August 2027</strong><br>Clearwell Castle · Gloucestershire, England<br>Arrive from 1pm · Ceremony at 2pm · Celebrate until midnight</p>
+            <div class="button-row">
+              <a class="btn" href="#celebration">Discover our celebration <span aria-hidden="true">↓</span></a>
+              <a class="btn btn-outline" href="#rsvp">RSVP details</a>
+            </div>
+          </div>
+          <div class="hero-photo-stack">
+            <span class="hero-small-label" aria-hidden="true">17 · 08 · 27</span>
+            <div class="castle-frame">
+              <img src="./images/clearwell1.jpeg" alt="Clearwell Castle and its formal gardens" fetchpriority="high">
+              <span class="castle-caption">Clearwell Castle, Gloucestershire</span>
+            </div>
+            <div class="hero-polaroid"><img src="./images/couple.png" alt="George and Jose Antonio together"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="celebration" aria-labelledby="celebration-title">
+        <div class="section-wrap">
+          <div class="two-col">
+            <figure class="couple-portrait"><img src="./images/couple.png" alt="George and Jose Antonio smiling together" loading="lazy"></figure>
+            <div class="section-copy-first">
+              <p class="kicker">01 / The day</p>
+              <h2 class="section-title" id="celebration-title">A Day to<br>Remember</h2>
+              <div class="body-copy">
+                <p>Join us for a day filled with love, laughter, a little Spanish flair and plenty of celebration!</p>
+                <p>Our <strong>symbolic ceremony</strong> will be led by two very special friends, with words in both English and Spanish as we exchange rings and celebrate our commitment to one another.</p>
+                <p>Afterwards, we'll enjoy a drinks reception, a traditional sit-down wedding breakfast and an evening of music, dancing and unforgettable memories.</p>
+                <p>We can't wait to celebrate with you until midnight.</p>
+              </div>
+            </div>
+          </div>
+          <div class="itinerary" aria-label="Wedding day schedule">
+            <div class="schedule-item"><div class="schedule-time">1:00pm</div><span class="schedule-name">Guest arrival</span></div>
+            <div class="schedule-item"><div class="schedule-time">2:00pm</div><span class="schedule-name">Bilingual symbolic ceremony &amp; ring exchange</span></div>
+            <div class="schedule-item"><div class="schedule-time">Afterwards</div><span class="schedule-name">Drinks reception, wedding breakfast &amp; evening celebrations</span></div>
+            <div class="schedule-item"><div class="schedule-time">Midnight</div><span class="schedule-name">A final dance and goodnight</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint section-center" id="dress-code" aria-labelledby="dress-title">
+        <div class="section-wrap">
+          <p class="kicker">02 / What to wear</p>
+          <h2 class="section-title" id="dress-title">Dress to Celebrate</h2>
+          <div class="ornament" aria-hidden="true">✦</div>
+          <div class="dress-panel">
+            <p class="dress-quote">We're celebrating in a castle, so why not make the most of the occasion?</p>
+            <p>Our dress code is <strong>cocktail attire</strong> — suits for gentlemen and cocktail or elegant day dresses for ladies.</p>
+            <p><strong>Hats, fascinators and elegant hair accessories are very welcome,</strong> and if you fancy dressing a little <em>extra</em> to impress, we'd absolutely love that! A touch of glamour, a little individuality and some fabulous outfits are all encouraged.</p>
+            <p>We kindly ask guests to avoid <strong>full white, cream, beige or red outfits</strong>, although accents and accessories in these colours are absolutely welcome.</p>
+            <p>To complement the occasion, we also ask that <strong>chinos, casual attire, trainers and sneakers</strong> are left at home.</p>
+            <p class="dress-note">Above all, wear something that makes you feel wonderful, confident and ready to celebrate in style!</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="accommodation" aria-labelledby="accommodation-title">
+        <div class="section-wrap">
+          <p class="kicker">03 / Stay with us</p>
+          <h2 class="section-title" id="accommodation-title">Stay &amp; Celebrate</h2>
+          <p class="section-lead">Make a little more of the occasion with a one- or two-night stay at The Wyndham, just a short stroll from the castle.</p>
+          <div class="package-grid">
+            <article class="package">
+              <div class="package-top"><span class="package-dates">16–18 August 2027</span><span class="package-feature">Two nights</span></div>
+              <h3>The Two-Night Celebration</h3>
+              <div class="price">Price to be confirmed <small>Per person · Based on two sharing a double room</small></div>
+              <p>Arrive the day before our wedding and join us for a relaxed evening together.</p>
+              <ul>
+                <li>Check-in from 12pm on Monday 16 August</li>
+                <li>Two nights' accommodation at The Wyndham</li>
+                <li>Buffet on the evening of 16 August</li>
+                <li>Breakfast on 17 and 18 August</li>
+                <li>Traditional sit-down wedding breakfast on 17 August</li>
+                <li>Evening wedding food on 17 August</li>
+                <li>Check-out on 18 August (time to be confirmed)</li>
+              </ul>
+            </article>
+            <article class="package">
+              <div class="package-top"><span class="package-dates">17–18 August 2027</span><span class="package-feature">One night</span></div>
+              <h3>The Wedding Night</h3>
+              <div class="price">Price to be confirmed <small>Per person · Based on two sharing a double room</small></div>
+              <p>Stay on the night of our wedding and enjoy a relaxing morning afterwards.</p>
+              <ul>
+                <li>Check-in from 12pm on Tuesday 17 August</li>
+                <li>One night's accommodation at The Wyndham</li>
+                <li>Traditional sit-down wedding breakfast on 17 August</li>
+                <li>Evening wedding food on 17 August</li>
+                <li>Breakfast on 18 August</li>
+                <li>Check-out on 18 August (time to be confirmed)</li>
+              </ul>
+            </article>
+          </div>
+          <div class="information-panel">
+            <strong>Accommodation requests:</strong> Rooms are limited and will be allocated fairly on a <strong>first-come, first-served basis</strong> using the automatic timestamp of each original request. Choose your preferred package in our <a href="#rsvp">RSVP form</a>. We’ll check availability and contact you personally with the final price and an individual payment link. <strong>Submitting a request is not a confirmed booking.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cream" id="travel" aria-labelledby="travel-title">
+        <div class="section-wrap">
+          <p class="kicker">04 / Your journey</p>
+          <h2 class="section-title" id="travel-title">Travel &amp; Transfers</h2>
+          <p class="section-lead">To our friends and family travelling from Spain: we know the journey takes a little extra planning, and we're so grateful you're making it.</p>
+          <div class="body-copy" style="margin-top:25px">
+            <p>We're arranging <strong>one return coach transfer</strong> between Bristol Airport and Clearwell Castle for guests travelling on either of our suggested outbound flights. Both arrivals will share the same coach.</p>
+            <p><strong>If you're on the earlier flight, you may need to wait for guests arriving on the slightly later flight before the coach can depart.</strong> Bristol Airport has cafés, bars and restaurants, although some are located after security. There are food and drink options in the public terminal area for guests waiting after arrival. We'll confirm the meeting point and coach departure details nearer the time.</p>
+            <p><strong>Return transfer price: to be confirmed, per person.</strong> You're welcome to travel on other flights, but we won't be able to organise coach transfers outside the suggested flight arrangements.</p>
+          </div>
+          <div class="flight-table-wrap">
+            <table class="flight-table">
+              <thead><tr><th>Date</th><th>Route</th><th>Airline</th><th>Departure → Arrival</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Date">Mon 16 Aug 2027</td><td data-label="Route">Alicante → Bristol</td><td data-label="Airline">Jet2</td><td data-label="Times"><strong>10:55 → 12:35</strong></td></tr>
+                <tr><td data-label="Date">Mon 16 Aug 2027</td><td data-label="Route">Alicante → Bristol</td><td data-label="Airline">Ryanair</td><td data-label="Times"><strong>11:45 → 13:20</strong></td></tr>
+                <tr><td data-label="Date">Wed 18 Aug 2027</td><td data-label="Route">Bristol → Alicante</td><td data-label="Airline">easyJet</td><td data-label="Times"><strong>12:50 → 16:20</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:12px;color:var(--ink-soft);margin-top:12px">All times are local to the departure and arrival airports. These flight times are taken from our suggested options for 16 and 18 August 2027 and may change. Please check the airline's schedule, availability and prices before booking. Flights are booked and paid for by guests.</p>
+          <div class="travel-bottom">
+            <div class="sub-card">
+              <h3>Making Your Own Way</h3>
+              <p>If you're arriving independently, you can arrange a taxi, private transfer or hire car. <strong>Free parking is available on site at Clearwell Castle.</strong> Please pre-book your transport, especially for your return journey.</p>
+              <p><a class="text-link" href="https://www.bristolairport.co.uk/at-the-airport/shop-and-eat" target="_blank" rel="noopener noreferrer">Food &amp; drink at Bristol Airport ↗</a></p>
+              <p><a class="text-link" href="https://www.jet2.com/" target="_blank" rel="noopener noreferrer">Jet2 ↗</a> &nbsp; · &nbsp; <a class="text-link" href="https://www.ryanair.com/" target="_blank" rel="noopener noreferrer">Ryanair ↗</a> &nbsp; · &nbsp; <a class="text-link" href="https://www.easyjet.com/" target="_blank" rel="noopener noreferrer">easyJet ↗</a></p>
+            </div>
+            <div class="sub-card">
+              <h3>Finding the Castle</h3>
+              <address class="address">Clearwell Castle<br>Clearwell, Forest of Dean<br>Gloucestershire, GL16 8LG<br>United Kingdom</address>
+              <p style="margin-top:14px"><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Clearwell+Castle%2C+Clearwell%2C+GL16+8LG" target="_blank" rel="noopener noreferrer">Open directions in Google Maps ↗</a></p>
+            </div>
+          </div>
+          <div class="taxi-panel">
+            <h3>Local Taxis</h3>
+            <p>Please pre-book taxis to and from Clearwell Castle in advance.</p>
+            <div class="taxi-list" aria-label="Local taxi contacts">
+              <div class="taxi-contact"><span>A1 Taxis</span><a href="tel:+447764202205" aria-label="Call A1 Taxis">07764 202205</a></div>
+              <div class="taxi-contact"><span>CDS Taxis</span><a href="tel:+441594834834" aria-label="Call CDS Taxis">01594 834834</a></div>
+              <div class="taxi-contact"><span>Driving Miss Daisy</span><a href="tel:+447599011397" aria-label="Call Driving Miss Daisy">07599 011397</a></div>
+              <div class="taxi-contact"><span>Fast Cabs</span><a href="tel:+447943101300" aria-label="Call Fast Cabs">07943 101300</a></div>
+              <div class="taxi-contact"><span>Paul Matthews Taxi</span><a href="tel:+447826618442" aria-label="Call Paul Matthews Taxi">07826 618442</a></div>
+              <div class="taxi-contact"><span>Sovereign</span><a href="tel:+441594836757" aria-label="Call Sovereign">01594 836757</a></div>
+            </div>
+            <p class="taxi-footnote">These contact numbers have been supplied for your convenience. Please confirm availability, pricing and pickup arrangements directly with the operator.</p>
+          </div>
+          <div class="map-frame"><iframe title="Map showing Clearwell Castle, Gloucestershire" src="https://www.google.com/maps?q=Clearwell+Castle%2C+Clearwell%2C+GL16+8LG&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="traditions" aria-labelledby="traditions-title">
+        <div class="section-wrap tradition-inner">
+          <p class="kicker">05 / The best of both cultures</p>
+          <h2 class="section-title" id="traditions-title">A Little Spanish Flair</h2>
+          <div class="ornament" aria-hidden="true">✦</div>
+          <p>With our friends and family coming together from different countries and cultures, we're bringing a few Spanish wedding traditions to our celebration.</p>
+          <p><strong>There is no “George's side” or “Jose Antonio's side”.</strong> We're one big celebration — sit wherever you feel comfortable, meet someone new and enjoy the day together.</p>
+          <div class="viva" lang="es">¡Que vivan los novios!</div>
+          <div class="viva-caption">“Long live the grooms!”</div>
+          <p>You'll probably hear this shouted throughout the day. Don't be shy — the traditional response is a very enthusiastic...</p>
+          <div class="viva-reply" lang="es">¡Viva!</div>
+          <p>Whether you're joining us from England, Spain or somewhere else entirely, we can't wait to celebrate together.</p>
+        </div>
+      </section>
+
+      <section class="section section-light" id="gifts" aria-labelledby="gifts-title">
+        <div class="section-wrap gift-inner">
+          <p class="kicker">06 / With love</p>
+          <h2 class="section-title" id="gifts-title">Wedding Gifts</h2>
+          <div class="gift-script">Your presence is our present</div>
+          <p>Having you with us to celebrate our wedding means more than any gift ever could.</p>
+          <p>We know that joining us may involve travel, accommodation and other expenses, and we genuinely don't expect presents. Your presence, your love and the memories we'll make together are more than enough.</p>
+          <p>For anyone who would still like to give a little something, it's customary in Spain to give a monetary wedding gift rather than choose from a traditional gift list.</p>
+          <p>Any contribution would be gratefully received and put towards our wedding celebrations, honeymoon and the next chapter of our lives together.</p>
+          <p><strong>Please don't feel any obligation whatsoever — celebrating with you is what matters most.</strong></p>
+          <div class="gift-box">
+            <h3>Our Honeymoon &amp; Future Fund</h3>
+            <p>Giving is entirely optional. If you'd like to contribute, you can give a gift in person or ask us privately for bank transfer details. We'll add an optional contribution link here if we decide to set one up.</p>
+            <a class="btn btn-outline" href="#contact">Contact us privately</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+        <div class="section-wrap">
+          <div class="section-center"><p class="kicker">07 / Helpful details</p><h2 class="section-title" id="faq-title">Good to Know</h2><p class="section-lead">A few answers to help you enjoy the day without a worry.</p></div>
+          <div class="faq-list">
+            <details><summary>What time should I arrive?</summary><p>Guest arrival is planned from 1pm. Our ceremony begins at 2pm, so please arrive in good time. We'll confirm any further arrival guidance closer to the wedding.</p></details>
+            <details><summary>Can I bring a plus-one?</summary><p>Our invitations are for named guests only, so please RSVP only for the people included in your invitation.</p></details>
+            <details><summary>What should I wear?</summary><p>We're celebrating in cocktail attire: suits for gentlemen and cocktail or elegant day dresses for ladies. Hats, fascinators and glamorous accessories are welcome! Please avoid full white, cream, beige or red outfits (small accents are fine). No chinos, casual attire, trainers or sneakers, please.</p></details>
+            <details><summary>How do I request a room?</summary><p>Complete our combined RSVP and accommodation form and request a one- or two-night package. Requests will be timestamped and considered in the order received, subject to availability. Please don’t treat your request as a confirmed booking until we contact you.</p></details>
+            <details><summary>How will I pay for accommodation?</summary><p>We’ll contact you personally to confirm room availability, the final price and your individual payment link. Payments are not collected by the RSVP form or wedding website.</p></details>
+            <details><summary>What about the bar?</summary><p>We'll be treating everyone to drinks at the start of the celebrations. Once our hosted bar tab has been used, further drinks will be available to purchase by card only.</p></details>
+            <details><summary>Will there be food during the wedding?</summary><p>Yes. We'll be enjoying a traditional sit-down wedding breakfast and evening food on the wedding day. Both accommodation packages include these meals.</p></details>
+            <details><summary>Will I need to wait for the airport coach?</summary><p>Possibly. We're arranging one shared transfer for the suggested arrivals, so guests on the earlier flight may need to wait for the later flight and luggage collection. Bristol Airport has cafés and food and drink options in the public terminal area.</p></details>
+            <details><summary>Can I travel on a different flight?</summary><p>Absolutely. You're welcome to make your own travel arrangements, but the shared return coach will only serve the suggested flight arrangements. Other flights will require your own transfer to and from the venue.</p></details>
+            <details><summary>Is there parking at the castle?</summary><p>Yes, free on-site parking is available at Clearwell Castle.</p></details>
+            <details><summary>Do we need to bring a gift?</summary><p>Not at all. We know guests are making an effort to join us and your presence truly is enough. If you'd still like to give something, please see the Wedding Gifts section.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cream" id="rsvp" aria-labelledby="rsvp-title">
+        <div class="section-wrap">
+          <div class="rsvp-card">
+            <p class="deadline">KINDLY REPLY BY 1 JANUARY 2027 · PROVISIONAL</p>
+            <h2 id="rsvp-title">Will You Join Us?</h2>
+            <p>We would be delighted to celebrate with you. Please complete our bilingual RSVP form to confirm attendance, dietary and accessibility needs, and any accommodation or return coach requests.</p>
+            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSds0-R75gMFCttVM6Voz6zXyzEYcZKjLcm8dMzjK9XXsX5DzQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" aria-label="Complete your RSVP in Google Forms (opens in a new tab)">Complete your RSVP <span aria-hidden="true">↗</span></a>
+            <div class="request-note"><strong>Please note:</strong> Accommodation and coach requests are subject to availability and are not confirmed bookings. We’ll contact you personally with arrangements and prices.</div>
+            <p style="font-size:12px;margin-top:21px">Invitations are for named guests only. Rooms are allocated first come, first served according to the original request submission timestamp, subject to availability and personal confirmation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light section-center" id="contact" aria-labelledby="contact-title">
+        <div class="section-wrap">
+          <p class="kicker">08 / We're here to help</p>
+          <h2 class="section-title" id="contact-title">Get in Touch</h2>
+          <p class="section-lead">Questions about the day, accommodation or travel? We'd be delighted to help.</p>
+          <div class="contact-grid">
+            <div class="contact-person"><h3>George</h3><a class="btn" href="https://wa.me/34600295368" target="_blank" rel="noopener noreferrer" aria-label="Message George on WhatsApp">Message on WhatsApp ↗</a></div>
+            <div class="contact-person"><h3>Jose Antonio</h3><a class="btn" href="https://wa.me/34697890876" target="_blank" rel="noopener noreferrer" aria-label="Message Jose Antonio on WhatsApp">Message on WhatsApp ↗</a></div>
+          </div>
+          <p class="contact-note">Please use WhatsApp for questions only. To keep accommodation allocation fair, submit accommodation requests through the <a href="#rsvp">RSVP form</a>, not by WhatsApp.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-monogram">G &amp; JA</p>
+      <p>GEORGE &amp; JOSE ANTONIO</p>
+      <p>17 AUGUST 2027 · CLEARWELL CASTLE</p>
+      <button type="button" id="return-to-envelopes">Return to envelopes</button>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const body = document.body;
+      const landing = document.getElementById('landing');
+      const site = document.getElementById('site');
+      const english = document.getElementById('english-envelope');
+      const spanish = document.getElementById('spanish-envelope');
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuPanel = document.getElementById('menu-panel');
+      const menuShade = document.getElementById('menu-shade');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let animating = false;
+
+      function closeMenu(restoreFocus) {
+        if (!body.classList.contains('menu-open')) return;
+        body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        menuPanel.inert = true;
+        body.classList.remove('is-locked');
+        if (restoreFocus) menuToggle.focus();
+      }
+      function openMenu() {
+        if (body.classList.contains('menu-open')) { closeMenu(true); return; }
+        body.classList.add('menu-open');
+        body.classList.add('is-locked');
+        menuPanel.inert = false;
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', 'Close navigation menu');
+        const firstLink = menuPanel.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
+      menuToggle.addEventListener('click', openMenu);
+      menuShade.addEventListener('click', function () { closeMenu(false); });
+      menuPanel.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { closeMenu(false); });
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') { closeMenu(true); }
+        if (event.key === 'Tab' && body.classList.contains('menu-open')) {
+          const focusables = [menuToggle].concat(Array.from(menuPanel.querySelectorAll('a')));
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        }
+      });
+
+      function jumpToTop() {
+        const root = document.documentElement;
+        root.style.scrollBehavior = 'auto';
+        window.scrollTo(0, 0);
+        requestAnimationFrame(function () { root.style.scrollBehavior = ''; });
+      }
+      function showSite(withAnimation) {
+        site.hidden = false;
+        landing.setAttribute('aria-hidden', 'true');
+        landing.inert = true;
+        jumpToTop();
+        requestAnimationFrame(function () {
+          body.classList.add('is-revealing');
+          window.setTimeout(function () {
+            body.classList.remove('is-revealing', 'is-locked');
+            body.classList.add('has-entered');
+            landing.hidden = true;
+            animating = false;
+            if (!window.location.hash) document.getElementById('hero-heading').focus({ preventScroll:true });
+          }, withAnimation ? 850 : 0);
+        });
+      }
+      function enterInvitation(choice, destination) {
+        if (animating || body.classList.contains('has-entered')) return;
+        animating = true;
+        if (reducedMotion.matches) {
+          if (destination) { window.location.assign(destination); }
+          else { showSite(false); }
+          return;
+        }
+        const rect = choice.getBoundingClientRect();
+        const dx = window.innerWidth / 2 - (rect.left + rect.width / 2);
+        const dy = window.innerHeight / 2 - (rect.top + rect.height / 2);
+        choice.style.setProperty('--fly-x', dx + 'px');
+        choice.style.setProperty('--fly-y', dy + 'px');
+        choice.classList.add('is-selected');
+        landing.classList.add('is-opening');
+        window.setTimeout(function () { landing.classList.add('seal-broken'); }, 800);
+        window.setTimeout(function () { landing.classList.add('flap-open'); }, 1070);
+        window.setTimeout(function () { landing.classList.add('letter-emerged'); }, 1610);
+        window.setTimeout(function () {
+          if (destination) { window.location.assign(destination); }
+          else { showSite(true); }
+        }, 2310);
+      }
+      english.addEventListener('click', function () { enterInvitation(english, null); });
+      spanish.addEventListener('click', function () { enterInvitation(spanish, './es.html'); });
+      document.getElementById('return-to-envelopes').addEventListener('click', function () {
+        closeMenu(false);
+        site.hidden = true;
+        body.classList.remove('has-entered', 'is-revealing');
+        body.classList.add('is-locked');
+        landing.hidden = false;
+        landing.inert = false;
+        landing.removeAttribute('aria-hidden');
+        landing.classList.remove('is-opening', 'seal-broken', 'flap-open', 'letter-emerged');
+        [english, spanish].forEach(function (choice) {
+          choice.classList.remove('is-selected');
+          choice.style.removeProperty('--fly-x');
+          choice.style.removeProperty('--fly-y');
+        });
+        jumpToTop();
+        english.focus({ preventScroll:true });
+      });
+      if (window.location.hash && document.querySelector('main')?.contains(document.getElementById(window.location.hash.slice(1)))) {
+        // Direct invitation links should still let guests reach the relevant section.
+        showSite(false);
+        window.setTimeout(function () {
+          const section = document.getElementById(window.location.hash.slice(1));
+          if (section) { document.documentElement.style.scrollBehavior = 'auto'; section.scrollIntoView(); document.documentElement.style.scrollBehavior = ''; }
+        }, 50);
+      }
+      if ('IntersectionObserver' in window) {
+        const navLinks = Array.from(menuPanel.querySelectorAll('a'));
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(function (link) {
+              if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+              else link.removeAttribute('aria-current');
+            });
+          });
+        }, { rootMargin:'-25% 0px -65% 0px', threshold:0 });
+        document.querySelectorAll('main section[id]').forEach(function (section) { observer.observe(section); });
+      }
+      // RSVP submissions are handled by Google Forms; this site does not collect guest information or process payments.
+    }());
+  </script>
+</body>
+</html>
